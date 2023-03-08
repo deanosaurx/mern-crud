@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import { MongoClient, Collection, ObjectId } from "mongodb";
 import bodyParser from "body-parser";
+import cors from "cors";
 
 const app = express();
 const PORT = 3000;
@@ -28,6 +29,7 @@ let usersCollection: Collection<User>;
 })();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 // GET all users
 app.get("/users", async (req: Request, res: Response) => {
