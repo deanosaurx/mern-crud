@@ -21,6 +21,6 @@
   },
   "scripts": {
     "dev": "nodemon server.ts",
-    "start": "node server.ts"
+    "start": "ts-node server.ts"
   }
 }
