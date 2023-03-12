@@ -38,22 +38,9 @@ input {
   width: 100%;
 }
 
-select {
-  padding: 10px 12px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  font-size: 1em;
-  width: 107%;
-}
-
 label {
   display: block;
   margin: 20px 0 10px;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-around;
 }
 
 .menu-button {
@@ -61,12 +48,11 @@ label {
   height: 4em;
 }
 
-.user-card {
+.usercard {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
-  align-items: center;
 }
 
 .card {

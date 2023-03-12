@@ -1,14 +1,18 @@
 import { useState } from "react";
 import CreateUser from "./CreateUser";
-import UserCard from "./UserCard";
+import UserList from "./UserList";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <CreateUser />
-      <UserCard />
+    <div>
+      <div className="App">
+        <CreateUser />
+      </div>
+      <div className="usercard">
+        <UserList />
+      </div>
     </div>
   );
 }
