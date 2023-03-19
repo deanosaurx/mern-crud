@@ -18,14 +18,14 @@ function UserList() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/users")
+    fetch("ec2-54-73-155-72.eu-west-1.compute.amazonaws.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error(err));
   }, [users]);
 
   const handleDelete = (id: any) => {
-    fetch(`http://localhost:3000/users/${id}`, { method: "DELETE" })
+    fetch(`ec2-54-73-155-72.eu-west-1.compute.amazonaws.com/${id}`, { method: "DELETE" })
       .then(() => setUsers(users.filter((user: any) => user._id !== id)))
       .catch((err) => console.error(err));
   };
