@@ -6,7 +6,7 @@ function CreateUser() {
   const handleSubmit = (event: any) => {
     event.preventDefault();
 
-    fetch("54.73.155.72:3000/users", {
+    fetch("http://ec2-54-73-155-72.eu-west-1.compute.amazonaws.com/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
