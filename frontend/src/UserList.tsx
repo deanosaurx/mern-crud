@@ -22,7 +22,7 @@ function UserList() {
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error(err));
-  }, [users]);
+  }, []);
 
   const handleDelete = (id: any) => {
     fetch(`http://ec2-54-73-155-72.eu-west-1.compute.amazonaws.com:3000/${id}`, { method: "DELETE" })
