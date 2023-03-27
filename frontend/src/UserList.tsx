@@ -18,7 +18,7 @@ function UserList() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://ec2-54-73-155-72.eu-west-1.compute.amazonaws.com:3000/users")
+    fetch(`${process.env.AMAZON_DOMAIN_NAME}:3000/users`)
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error(err));
