@@ -15,7 +15,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_REGISTRY = "deanosaurx"
+        DOCKER_REGISTRY = "deanosaurx/mern-app"
         FRONTEND_IMAGE_NAME = "frontend"
         BACKEND_IMAGE_NAME = "backend"
         IMAGE_TAG = "${env.BUILD_NUMBER}"
