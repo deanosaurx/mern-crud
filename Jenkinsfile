@@ -23,12 +23,18 @@ pipeline {
 
     stages {
         stage('Build Frontend Image') {
+            when {
+                changeset "frontend/**"
+            }
             steps {
                 buildFrontendImage()
             }
         }
 
         stage('Build Backend Image') {
+            when {
+                changeset "backend/**"
+            }
             steps {
                 buildBackendImage()
             }
