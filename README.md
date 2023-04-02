@@ -23,4 +23,4 @@ docker-compose up -d
 
 ###### The backend API is accessible at http://ec2-54-73-155-72.eu-west-1.compute.amazonaws.com:3000/users. You can use this API to interact with the database programmatically.
 
-.
+
