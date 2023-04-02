@@ -5,7 +5,7 @@ def call() {
         }
         sh 'docker build -t ${BACKEND_IMAGE_NAME} ./backend'
         sh 'docker tag $BACKEND_IMAGE_NAME ${DOCKER_REGISTRY}/$BACKEND_IMAGE_NAME:latest'
-        sh 'docker tag $FRONTEND_IMAGE_NAME $D{DOCKER_REGISTRY}/$BACKEND_IMAGE_NAME:${IMAGE_TAG}'
+        sh 'docker tag $FRONTEND_IMAGE_NAME ${DOCKER_REGISTRY}/$BACKEND_IMAGE_NAME:${IMAGE_TAG}'
         sh 'docker push ${DOCKER_REGISTRY}/${BACKEND_IMAGE_NAME}:${IMAGE_TAG}'
     }
 }
