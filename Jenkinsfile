@@ -45,7 +45,7 @@ pipeline {
         stage('Deploy to Minikube') {
             agent any
             steps {
-                sh 'minikube kubectl -- apply -f /home/ec2-user/deployment/frontend.yaml'
+                sh 'docker-compose up -d'
             }
         }
         stage('Clean up Docker images') {
