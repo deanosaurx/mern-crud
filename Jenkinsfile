@@ -15,7 +15,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_REGISTRY = "docker.io/deanosaurx"
+        DOCKER_REGISTRY = "deanosaurx"
         FRONTEND_IMAGE_NAME = "frontend"
         BACKEND_IMAGE_NAME = "backend"
         IMAGE_TAG = "${env.BUILD_NUMBER}"
@@ -39,9 +39,6 @@ pipeline {
                 changeset "backend/**"
             }
             steps {
-                withCredentials([usernamePassword(credentialsId: 'DOCKER_HUB', passwordVariable: 'DOCKER_HUB_PASSWORD', usernameVariable: 'DOCKER_HUB_USERNAME')]) {
-                sh "docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD"
-                }
                 buildBackendImage()
             }
         }
