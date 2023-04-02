@@ -22,3 +22,5 @@ docker-compose up -d
 ###### After provisioning thte container, The frontend should be accessible at http://ec2-54-73-155-72.eu-west-1.compute.amazonaws.com:5173. You can interact with the frontend to create and delete data from the database.
 
 ###### The backend API is accessible at http://ec2-54-73-155-72.eu-west-1.compute.amazonaws.com:3000/users. You can use this API to interact with the database programmatically.
+
+.
