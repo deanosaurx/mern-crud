@@ -42,5 +42,23 @@ pipeline {
                 buildBackendImage()
             }
         }
+        stage('Deploy to Minikube') {
+            agent any
+            steps {
+                sh 'minikube kubectl -- apply -f /home/ec2-user/deployment/frontend.yaml'
+            }
+        }
+        stage('Clean up Docker images') {
+            steps {
+                sh 'docker image prune -af'
+            }
+            post {
+                always {
+                    sh 'docker image prune -af'
+                }
+            }
+        }
+      }
     }
-}
+  
+
