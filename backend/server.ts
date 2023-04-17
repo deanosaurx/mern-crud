@@ -6,7 +6,7 @@ import cors from "cors";
 const app = express();
 const PORT = 3000;
 
-const MONGO_URL = "mongodb://mongodb:27017/devops-students";
+const MONGO_URL = "mongodb://localhost:27017/devops-students";
 const DB_NAME = "mydatabase";
 
 interface User {

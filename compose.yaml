@@ -1,15 +1,17 @@
 version: "3.9"
 services:
   frontend:
-    image: deanosaurx/mern-app:frontend
+    build: ./frontend
     ports:
       - "5173:5173"
     depends_on:
       - backend
   backend:
-    image: deanosaurx/mern-app:backend
+    build: ./backend
     ports:
       - "3000:3000"
+    environment:
+      MONGO_URL: "mongodb://mongodb:27017/my-database"
     depends_on:
       - mongodb
   mongodb:
