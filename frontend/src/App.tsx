@@ -18,5 +18,3 @@ function App() {
 }
 
 export default App;
-
-//Testing frontend trigger v18
